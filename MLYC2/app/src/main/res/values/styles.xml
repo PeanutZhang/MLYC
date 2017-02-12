@@ -5,6 +5,7 @@
     <style name="fullscrlltheme" parent="Theme.AppCompat.Light">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">#c62828</item>
 
     </style>
 </resources>

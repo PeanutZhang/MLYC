@@ -1,6 +1,8 @@
 package com.peanut.zyh.mlyc.activitys;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -51,6 +53,9 @@ public class GuideActivity extends BaseActivity {
        mbaner.setOnBannerClickListener(new OnBannerClickListener() {
            @Override
            public void OnBannerClick(int position) {
+                                                          // flag 生成的文件名
+               SharedPreferences sp = getSharedPreferences("flag", Context.MODE_PRIVATE);
+               sp.edit().putBoolean("isfirst",false).commit();
 
                    Intent it = new Intent(GuideActivity.this,MainActivity.class);
                    startActivity(it);

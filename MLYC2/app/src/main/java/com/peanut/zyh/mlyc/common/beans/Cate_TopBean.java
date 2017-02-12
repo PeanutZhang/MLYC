@@ -1,4 +1,4 @@
-package com.peanut.zyh.mlyc.common;
+package com.peanut.zyh.mlyc.common.beans;
 
 import android.os.Parcel;
 import android.os.Parcelable;

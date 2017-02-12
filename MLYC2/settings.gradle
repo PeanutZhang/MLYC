@@ -1,1 +1,2 @@
 include ':app', ':refresh',':xrecyclerview'
+include ':x5WebDemo'

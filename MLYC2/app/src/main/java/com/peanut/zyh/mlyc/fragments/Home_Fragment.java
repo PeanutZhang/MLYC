@@ -112,7 +112,7 @@ public class Home_Fragment extends Fragment {
 
         fragments = new ArrayList<>();
         fragments.add(new TuijianFragment());
-        for (int i = 0; i <tab_title.size() ; i++) {
+        for (int i = 1; i <tab_title.size() ; i++) {
             fragments.add(new HomeTab_CateFragment());
         }
 

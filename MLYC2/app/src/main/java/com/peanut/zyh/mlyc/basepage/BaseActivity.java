@@ -1,5 +1,6 @@
 package com.peanut.zyh.mlyc.basepage;
 
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
@@ -20,8 +21,11 @@ public abstract class BaseActivity extends AppCompatActivity {
       //  requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(getLayout());
 
+
       //  getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
        mUnbinder = ButterKnife.bind(this);
+
+
 
     }
 

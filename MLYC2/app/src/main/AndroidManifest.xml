@@ -6,6 +6,10 @@
 
     <!-- if you want to load images from a file OR from the internet -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -17,8 +21,8 @@
             android:name=".activitys.MainActivity"
             android:theme="@style/fullscrlltheme" />
         <activity
-            android:theme="@style/fullscrlltheme"
-            android:name=".activitys.SplshActivity">
+            android:name=".activitys.SplshActivity"
+            android:theme="@style/fullscrlltheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,9 +30,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:theme="@style/fullscrlltheme"
-            android:name=".activitys.GuideActivity" />
-
+            android:name=".activitys.GuideActivity"
+            android:theme="@style/fullscrlltheme" />
+        <activity android:name=".activitys.GoodDetailActivity"></activity>
     </application>
 
 </manifest>

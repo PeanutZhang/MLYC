@@ -1,4 +1,4 @@
-package com.peanut.zyh.mlyc.common;
+package com.peanut.zyh.mlyc.common.beans;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -69,6 +69,30 @@ public class Cate_BottomBean implements Parcelable {
         private String title;
         private String subtitle;
         private List<ObjectsBean> objects;
+
+        protected DataBean(Parcel in) {
+            count = in.readString();
+            page_count = in.readInt();
+            page_size = in.readInt();
+            next_cursor = in.readInt();
+            is_section = in.readString();
+            now_minute = in.readInt();
+            current_sort_id = in.readInt();
+            title = in.readString();
+            subtitle = in.readString();
+        }
+
+        public static final Creator<DataBean> CREATOR = new Creator<DataBean>() {
+            @Override
+            public DataBean createFromParcel(Parcel in) {
+                return new DataBean(in);
+            }
+
+            @Override
+            public DataBean[] newArray(int size) {
+                return new DataBean[size];
+            }
+        };
 
         public String getCount() {
             return count;
@@ -157,7 +181,15 @@ public class Cate_BottomBean implements Parcelable {
 
         @Override
         public void writeToParcel(Parcel parcel, int i) {
-
+            parcel.writeString(count);
+            parcel.writeInt(page_count);
+            parcel.writeInt(page_size);
+            parcel.writeInt(next_cursor);
+            parcel.writeString(is_section);
+            parcel.writeInt(now_minute);
+            parcel.writeInt(current_sort_id);
+            parcel.writeString(title);
+            parcel.writeString(subtitle);
         }
 
         public static class ObjectsBean {
